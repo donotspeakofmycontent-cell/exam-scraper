@@ -40,8 +40,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Add all JSON outputs (supports multiple exams)
-          git add *.json || true
+          # Add all encrypted outputs (supports multiple exams)
+          git add *.naxenc || true
 
           # Only commit if something actually changed
           git diff --staged --quiet || git commit -m "Automated daily archive update [skip ci]"
